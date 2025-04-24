@@ -1,9 +1,23 @@
+
+/**
+ * Clase Main del proyecto
+ * @author tarde
+ */
 public class Main {
 
+    /**
+     * Constructor
+     * @param args
+     */
     public static void main(String[] args) {
         operativaCuenta(0);
     }
 
+    /**
+     * Simula la creacián de una cuenta, además de distintas operaciones para comprobar su comportamiento.
+     * 
+     * @param cantidad
+     */
     public static void operativaCuenta(float cantidad) {
         CCuenta cuenta1;
         double saldoActual;

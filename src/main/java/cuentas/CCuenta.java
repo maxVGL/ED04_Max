@@ -1,3 +1,9 @@
+
+/**
+ * Simula una cuenta bancaria.
+ * 
+ * @author tarde
+ */
 public class CCuenta {
 
     private String nombre;
@@ -5,10 +11,21 @@ public class CCuenta {
     private double saldo;
     private double tipoInterés;
 
+    /**
+     * Constructor sin parámetros
+     */
     public CCuenta()
     {
     }
 
+    /**
+     * Constructor con parámetros
+     * 
+     * @param nom
+     * @param cue
+     * @param sal
+     * @param tipo
+     */
     public CCuenta(String nom, String cue, double sal, double tipo)
     {
         nombre =nom;
@@ -16,11 +33,22 @@ public class CCuenta {
         saldo=sal;
     }
 
+    /**
+     * Devuelve el saldo actual
+     * 
+     * @return
+     */
     public double estado()
     {
         return getSaldo();
     }
 
+    /**
+     * Añade la cantidad pasada por parámetro al saldo de la cuenta
+     * 
+     * @param cantidad
+     * @throws Exception
+     */
     public void ingresar(double cantidad) throws Exception
     {
         if (cantidad<0)
@@ -28,6 +56,12 @@ public class CCuenta {
         setSaldo(getSaldo() + cantidad);
     }
 
+    /**
+     * Retira la cantidad pasada por parámetro al saldo de la cuenta
+     * 
+     * @param cantidad
+     * @throws Exception
+     */
     public void retirar(double cantidad) throws Exception
     {
         if (cantidad <= 0)
@@ -38,6 +72,7 @@ public class CCuenta {
     }
 
     /**
+     * Accesor del nombre de la cuenta
      * @return the nombre
      */
     public String getNombre() {
@@ -45,6 +80,7 @@ public class CCuenta {
     }
 
     /**
+     * Mutador del nombre de la cuenta
      * @param nombre the nombre to set
      */
     public void setNombre(String nombre) {
@@ -52,6 +88,7 @@ public class CCuenta {
     }
 
     /**
+     * Accesor del identificador de la cuenta
      * @return the cuenta
      */
     public String getCuenta() {
@@ -59,6 +96,7 @@ public class CCuenta {
     }
 
     /**
+     * Mutador del identificador de la cuenta
      * @param cuenta the cuenta to set
      */
     public void setCuenta(String cuenta) {
@@ -66,6 +104,7 @@ public class CCuenta {
     }
 
     /**
+     * Accesor del saldo de la cuenta
      * @return the saldo
      */
     public double getSaldo() {
@@ -73,6 +112,7 @@ public class CCuenta {
     }
 
     /**
+     * Mutador del saldo de la cuenta
      * @param saldo the saldo to set
      */
     public void setSaldo(double saldo) {
@@ -80,6 +120,7 @@ public class CCuenta {
     }
 
     /**
+     * Accesor del tipo de interés de la cuenta
      * @return the tipoInterés
      */
     public double getTipoInterés() {
@@ -87,6 +128,7 @@ public class CCuenta {
     }
 
     /**
+     * Mutador del tipo de interés de la cuenta
      * @param tipoInterés the tipoInterés to set
      */
     public void setTipoInterés(double tipoInterés) {
